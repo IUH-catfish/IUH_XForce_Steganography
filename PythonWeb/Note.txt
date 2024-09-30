@@ -2,3 +2,6 @@ django-admin # Get sub commands
 django-admin startproject <name_of_the_project>
 # Runserver bằng lệnh này
 python manage.py runserver
+
+python manage.py startapp <name_of_app
+>
