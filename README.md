@@ -1,2 +1,2 @@
 # IUH_XForce_Steganography
-Dự án làm WebApp về Stetganpgraphy với LSB
+Project làm WebApp về Steganography với LSB
