@@ -4,4 +4,11 @@ django-admin startproject <name_of_the_project>
 python manage.py runserver
 
 python manage.py startapp <name_of_app
->
+> Haha123556!
+ makemigrations >> detect changes database
+python manage.py migrate >> changes database
+python manage.py createsuperuser >> create superuser
+
+DATABASE
+
+import
