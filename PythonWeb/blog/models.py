@@ -8,4 +8,7 @@ class Post(models.Model):
     content = models.TextField()
     #date_posted = models.DateTimeField(auto_now_add = True)
     date_posted = models.DateTimeField(default = timezone.now)
-    author = models.ForeignKey(User , on_delete = models.CASCADE) #1 post - 1 author
+    author = models.ForeignKey(User , on_delete = models.CASCADE) 
+    
+    def __str__(self):
+        return self.title

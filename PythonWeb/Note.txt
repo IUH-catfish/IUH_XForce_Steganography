@@ -5,10 +5,27 @@ python manage.py runserver
 
 python manage.py startapp <name_of_app
 > Haha123556!
- makemigrations >> detect changes database
-python manage.py migrate >> changes database
-python manage.py createsuperuser >> create superuser
+
 
 DATABASE
+python manage.py makemigrations >> detect changes database, must update if change models.py, update the change in migrations folder
+python manage.py migrate >> changes database
+python manage.py createsuperuser >> create superuser
+python manage.py sqlmigrate blog 0001 cho codesql từ file
 
-import
+SHELL WITH DATABASE
+python manage.py shell #dùng model line by line
+In [1]: from blog.models import Post
+In [2]: from django.contrib.auth.models import User 
+User.objects.all() => QuerySet
+User.objects.first() => User
+user = User.objects.filter(username = 'MinhXf').first()
+user.id, user.pk
+
+post_1 = Post(title = 'Blog 1', content = 'First Blog!', author = user)
+post_1.save()
+
+exit()
+
+Django have a special name model method => <user>.<modelname>_set #Which post do i have?
+<user>.<modelname>_set.create
