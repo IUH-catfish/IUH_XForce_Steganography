@@ -1,0 +1,45 @@
+{% extends "blog/base.html" %}
+
+
+<header class="bg-primary text-white p-3 mb-4">
+    <div class="container">
+        <h1 class="text-center">Steganography Web Application</h1>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Upload Image Section -->
+    <section id="upload" class="mb-4">
+        <h2 class="mb-3">Upload Image</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm">
+            <div class="mb-3">
+                <label for="image" class="form-label">Select Image:</label>
+                <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="message" class="form-label">Message to Encode:</label>
+                <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Encode Message</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Decode Image Section -->
+    <section id="decode" class="mb-4">
+        <h2 class="mb-3">Decode Image</h2>
+        <form action="/decode" method="POST" enctype="multipart/form-data" class="card p-4 shadow-sm">
+            <div class="mb-3">
+                <label for="decode-image" class="form-label">Select Encoded Image:</label>
+                <input type="file" class="form-control" id="decode-image" name="decode_image" accept="image/*" required>
+            </div>
+
+            <div class="d-grid">
+                <button type="submit" class="btn btn-success">Decode Message</button>
+            </div>
+        </form>
+    </section>
+</main>

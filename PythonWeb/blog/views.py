@@ -29,3 +29,6 @@ def about(request):
     respond = '<h1>About This Blog Here</h1>'
     return render(request, 'blog/about.html', {'title':"about the page"})
 
+def steganography(request):
+    return render(request, 'blog/steganography.html', {'title':"about the page"})
+
